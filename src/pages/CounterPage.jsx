@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Button from "./+/-Button/Button";
-import DisplayCounter from "./DisplayCounter/DisplayCounter";
+import "./CounterPage.css";
+import Button from "../Components/Button/Button";
+import DisplayCounter from "../Components/DisplayCounter/DisplayCounter";
 const CounterPage = () => {
   let [counter, setCounter] = useState(0);
   const increaseCounter = () => {
@@ -12,11 +13,21 @@ const CounterPage = () => {
     }
   };
   return (
-    <>
+    <div className="container">
       <DisplayCounter counter={counter} />
-      <Button type="+" func={increaseCounter}></Button>
-      <Button type="-" func={decreaseCounter}></Button>
-    </>
+      <section className="buttons">
+        <Button
+          className="button increase"
+          type="+"
+          func={increaseCounter}
+        ></Button>
+        <Button
+          className="button decrease"
+          type="-"
+          func={decreaseCounter}
+        ></Button>
+      </section>
+    </div>
   );
 };
 export default CounterPage;
