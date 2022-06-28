@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./CounterPage.css";
-import Button from "../Components/Button/Button";
-import DisplayCounter from "../Components/DisplayCounter/DisplayCounter";
+import Button from "../../Components/Button/Button";
+import DisplayCounter from "../../Components/DisplayCounter/DisplayCounter";
 const CounterPage = () => {
   let [counter, setCounter] = useState(0);
   const increaseCounter = () => {
