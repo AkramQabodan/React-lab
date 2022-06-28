@@ -28,5 +28,8 @@ h1 {
   cursor: pointer;
 }
 .increase {
+  color: green;
+}
+.decrease {
   color: red;
 }

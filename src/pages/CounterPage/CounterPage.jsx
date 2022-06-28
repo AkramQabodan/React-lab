@@ -4,6 +4,7 @@ import Button from "../../Components/Button/Button";
 import DisplayCounter from "../../Components/DisplayCounter/DisplayCounter";
 const CounterPage = () => {
   let [counter, setCounter] = useState(0);
+
   const increaseCounter = () => {
     setCounter(counter + 1);
   };
