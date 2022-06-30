@@ -12,7 +12,7 @@ const Details = () => {
     fetch(`https://fakestoreapi.com/products/${userId ? userId : 1}`)
       .then((item) => item.json())
       .then((item) => setItem(item));
-  }, []);
+  }, [userId]);
 
   return (
     <div className="container-details">

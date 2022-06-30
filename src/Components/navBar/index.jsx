@@ -7,15 +7,18 @@ const NavBar = () => {
         <Link className="navLink" to="/">
           Home
         </Link>
-        <Link className="navLink" to="counter">
+        <Link className="navLink" to="/counter">
           Counter
         </Link>
-        <Link className="navLink" to="shop">
+        <Link className="navLink" to="/shop">
           Shop
         </Link>
 
-        <Link className="navLink" to="about">
+        <Link className="navLink" to="/about">
           About
+        </Link>
+        <Link className="navLink" to="/todo">
+          ToDo-List
         </Link>
       </ul>
     </nav>

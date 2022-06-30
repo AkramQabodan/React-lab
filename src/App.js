@@ -7,19 +7,22 @@ import NavBar from "./Components/navBar";
 import About from "./pages/about";
 import Details from "./pages/details";
 import NotFound from "./pages/notFound";
+import Todo from "./pages/todo/Todo";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <BrowserRouter>
       <NavBar />
+
       <Routes>
-        <Route path="*" element={<NotFound />} />
-        <Route path="/" element={<Home />} />
         <Route path="/counter" element={<CounterPage />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/shop/details/:id" element={<Details />} />
         <Route path="/about" element={<About />} />
+        <Route path="/todo" element={<Todo />} />
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
