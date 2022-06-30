@@ -14,7 +14,6 @@ function Todo() {
   };
 
   const deleteTodo = (index) => {
-    console.log(index);
     dispatch(deleteTodoRedux(index));
   };
   console.log(store);

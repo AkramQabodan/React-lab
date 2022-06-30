@@ -1,0 +1,12 @@
+.todo-list-item {
+  display: flex;
+}
+.todo-list-item .delete-button {
+  height: 20px;
+  width: 20px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}

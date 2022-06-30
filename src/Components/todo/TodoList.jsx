@@ -1,16 +1,19 @@
+import "./TodoList.css";
 const TodoList = ({ todos, deleteTodo }) => {
   const todosList =
     todos && todos.length > 0 ? (
       todos.map((todo, i) => {
         return (
-          <ul key={i}>
+          <ul key={i} className="todo-list-item">
             <li className="border d-flex">
               <div className="text">
                 <p>Title : {todo.title}</p>
                 <p>Content : {todo.content}</p>
               </div>
             </li>
-            <button onClick={() => deleteTodo(i)}>X</button>
+            <button className="delete-button" onClick={() => deleteTodo(i)}>
+              X
+            </button>
           </ul>
         );
       })
