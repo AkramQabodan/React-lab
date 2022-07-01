@@ -1,7 +1,6 @@
-import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addTodoRedux } from "../../redux";
-import { deleteTodoRedux } from "../../redux";
+import { addTodoRedux } from "../../redux/oldReduxConfig";
+import { deleteTodoRedux } from "../../redux/oldReduxConfig";
 import TodoForm from "../../Components/todo/TodoForm";
 import TodoList from "../../Components/todo/TodoList";
 import "./Todo.css";

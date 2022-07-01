@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
 import { Spinner } from "react-bootstrap";
+import { addProduct } from "../../redux/features/shopSlice";
+import { useDispatch } from "react-redux/es/exports";
 import ItemCard from "../../Components/itemCard";
 
 const Shop = () => {
   const [itemsList, setItemList] = useState([]);
+  const dispatch = useDispatch();
+  dispatch(addProduct("hi"));
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((items) => items.json())
