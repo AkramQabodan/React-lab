@@ -1,24 +1,25 @@
 import { useState, useEffect } from "react";
 import { Spinner } from "react-bootstrap";
 import { addProduct } from "../../redux/features/shopSlice";
-import { useDispatch } from "react-redux/es/exports";
+import { useDispatch, useSelector } from "react-redux/es/exports";
+import { getShopItems } from "../../redux/features/shopSlice";
 import ItemCard from "../../Components/itemCard";
 
 const Shop = () => {
-  const [itemsList, setItemList] = useState([]);
   const dispatch = useDispatch();
-  dispatch(addProduct("hi"));
+
+  const state = useSelector((state) => state.shopSlice);
+
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((items) => items.json())
-      .then((items) => setItemList(items));
+    dispatch(getShopItems());
   }, []);
+
   return (
     <>
-      {itemsList.length > 0 ? (
+      {state.loaded ? (
         <div className="container">
           <ul className="listItems">
-            {itemsList.map((item) => (
+            {state.products.map((item) => (
               <ItemCard key={item.id} item={item} />
             ))}
           </ul>
