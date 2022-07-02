@@ -1,0 +1,19 @@
+.container {
+  width: 20%;
+  border: 1px solid black;
+}
+.css-b62m3t-container {
+  width: 100%;
+  margin-bottom: 10px;
+}
+label {
+  width: 100%;
+  margin-bottom: 10px;
+}
+input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.warning {
+  color: red;
+}
